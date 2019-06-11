@@ -29,7 +29,8 @@
     "@emotion/styled": "^10.0.7",
     "normalize.css": "^8.0.1",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
