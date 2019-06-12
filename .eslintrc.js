@@ -5,10 +5,10 @@ module.exports = {
     es6: true
   },
   extends: [
-    "plugin:@typescript-eslint/recommended",
+    // "plugin:@typescript-eslint/recommended",
     "react-app",
-    "prettier",
-    "prettier/@typescript-eslint"
+    "prettier"
+    // "prettier/@typescript-eslint"
   ],
   globals: {
     Atomics: "readonly",
@@ -25,7 +25,7 @@ module.exports = {
   // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules
   rules: {
     "@typescript-eslint/explicit-function-return-type": "off",
-    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn"
   }
 };

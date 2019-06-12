@@ -27,6 +27,7 @@
     "@babel/polyfill": "^7.4.0",
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
+    "firebase": "^6.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
