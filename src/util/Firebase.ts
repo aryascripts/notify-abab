@@ -5,6 +5,7 @@ import "firebase/auth";
 class Firebase {
   auth;
   googleProvider;
+  loggedInUser;
 
   constructor() {
     firebase.initializeApp(config);
@@ -13,9 +14,15 @@ class Firebase {
   }
 
   kickOffAuthentication() {
-    return this.auth.signInWithPopup(this.googleProvider).then(googleUser => {
-      console.log(googleUser);
-    });
+    return this.auth
+      .signInWithPopup(this.googleProvider)
+      .then(googleUser => {
+        this.loggedInUser = googleUser;
+        return true;
+      })
+      .catch(e => {
+        console.error(e);
+      });
   }
 
   print() {
