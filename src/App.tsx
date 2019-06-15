@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
 import Header from "./components/common/Header";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Home from "./components/Home";
 
 export default function App() {

@@ -1,8 +1,15 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
+import theme from './../../util/Theme';
+
+const height = '35px';
 
 export default function Header() {
-  return <TopPanel>Notify</TopPanel>;
+  return (
+    <TopPanel>
+     <Title>Notefy</Title>
+    </TopPanel>
+  );
 }
 
 const TopPanel = styled.div`
@@ -10,13 +17,22 @@ const TopPanel = styled.div`
   left: 0;
   top: 0;
 
-  font-family: monospace;
+  font-family: 'Source Code Pro', monospace;
   text-transform: uppercase;
+  font-size: 16px;
+  color: ${theme.textColor};
+  line-height: ${height};
 
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  background-color: #f0f4f8;
+  background-color: ${theme.highlightBlue};
   width: 100%;
-  height: 35px;
+  height: ${height};
+
+`;
+
+const Title = styled.div`
+  height: ${height};
+  padding: 0 20px;
+  border-right: 1px solid ${theme.background}
 `;
