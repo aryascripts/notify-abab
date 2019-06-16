@@ -18,17 +18,9 @@ h5 {
   margin: 0;
 }
 
-html,
-body,
-#root {
-  width: 100%;
+html, body, #root {
+  box-sizing: border-box;
   height: 100%;
+  width: 100%;
 }
-
-ul {
-  padding: 0 0 0 26px;
-}
-
-li {
-  padding: 3px 0;
-}
+* { box-sizing: inherit; }

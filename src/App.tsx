@@ -11,6 +11,7 @@ import history from './util/History';
 
 export default function App() {
   return (
+
     <Router history={history}>
       <Header />
 
@@ -19,9 +20,11 @@ export default function App() {
         <Route exact path='/' component={Home} />
       </ContentContainer>
     </Router>
+
   );
 }
 
 const ContentContainer = styled.div`
   padding-top: 35px;
+  height: 100%;
 `;

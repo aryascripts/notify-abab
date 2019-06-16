@@ -23,12 +23,11 @@ export default function Sidebar() {
 
 const SidebarContainer = styled.div`
   width: 250px;
-  height: 100vh;
+  height: 100%;
+
   background: rgba(45, 106, 134, 0.15);
-  position: fixed;
   top: 0;
   left: 0;
-  padding-top: ${Theme.headerHeight};
 
   z-index: ${Indexes.sidebar};
 `;
