@@ -1,5 +1,8 @@
-import React from "react";
+import React from 'react';
+import Sidebar from './common/Sidebar';
 
 export default function Home() {
-  return <div>Application here</div>;
+  return (
+    <Sidebar />
+  );
 }

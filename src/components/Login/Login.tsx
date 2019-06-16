@@ -1,7 +1,6 @@
 import React from 'react';
 import Firebase from './../../util/Firebase';
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core'
 
 import Notify from './../common/Notify';
 import google from './../../assets/google.png';
@@ -19,7 +18,7 @@ export default function Login() {
       </WelcomeMessage>
 
       <GoogleLoginButton onClick={startAuth}>
-        <img width="191" height="46" src={google} />
+        <img alt="Login with Google" width="191" height="46" src={google} />
       </GoogleLoginButton>
 
     </Notify>

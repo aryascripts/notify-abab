@@ -1,7 +1,6 @@
 import * as firebase from "firebase/app";
 import { config } from "./../firebase.config";
 import 'firebase/auth';
-import LocalStorage from './LocalStorage';
 import history from './History';
 
 class Firebase {
