@@ -24,7 +24,7 @@ export default function Sidebar() {
 const SidebarContainer = styled.div`
   width: 250px;
   height: 100vh;
-  background: rgba(45, 106, 134, 0.1);
+  background: rgba(45, 106, 134, 0.15);
   position: fixed;
   top: 0;
   left: 0;
@@ -50,10 +50,16 @@ const SectionTitle = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0 0 0 10px;
+  transition: background-color 150ms ease-in-out;
+
+    :hover {
+      background-color: rgb(45, 114, 210, 0.3);
+    }
 `;
 
 const PageTitle = styled(SectionTitle)`
   font-size: 14px;
   padding: 0 0 0 14px;
   height: 30px;
+  font-weight: 200;
 `;
