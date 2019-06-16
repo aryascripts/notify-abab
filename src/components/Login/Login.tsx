@@ -3,6 +3,7 @@ import Firebase from './../../util/Firebase';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core'
 
+import Notify from './../common/Notify';
 import google from './../../assets/google.png';
 
 export default function Login() {
@@ -11,7 +12,7 @@ export default function Login() {
   };
 
   return (
-    <LoginPanel>
+    <Notify>
 
       <WelcomeMessage>
         Welcome To Notefy
@@ -21,7 +22,7 @@ export default function Login() {
         <img width="191" height="46" src={google} />
       </GoogleLoginButton>
 
-    </LoginPanel>
+    </Notify>
   );
 }
 
@@ -38,30 +39,10 @@ const WelcomeMessage = styled.div`
   padding: 20px 0;
 `;
 
-const transitionDown = keyframes`
-  from { height: 0px; }
-  to { height: 200px; }
-`;
-
 const GoogleLoginButton = styled.div`
   cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-bottom: 20px;
-`;
-
-const LoginPanel = styled.div`
-  width: 50%;
-  min-width: 300px;
-  background-color: white;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
-  height: 0px;
-  overflow: hidden;
-
-  animation: ${transitionDown} 250ms linear 1;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
 `;

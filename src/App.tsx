@@ -1,20 +1,22 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.css";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Router, Route } from 'react-router-dom';
+import './App.css';
 
-import Header from "./components/common/Header";
-import Login from "./components/Login/Login";
-import Home from "./components/Home";
+import Header from './components/common/Header';
+import Login from './components/Login/Login';
+import Home from './components/Home';
+
+import history from './util/History';
 
 export default function App() {
   return (
-    <Router>
+    <Router history={history}>
       <Header />
 
       <ContentContainer>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/app" component={Home} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/' component={Home} />
       </ContentContainer>
     </Router>
   );

@@ -1,11 +1,10 @@
 import * as firebase from "firebase/app";
 import { config } from "./../firebase.config";
-import "firebase/auth";
+import 'firebase/auth';
 import LocalStorage from './LocalStorage';
+import history from './History';
 
 class Firebase {
-  auth;
-  googleProvider;
   loggedInUser;
 
   constructor() {
@@ -22,7 +21,7 @@ class Firebase {
             .then(() => {
               const provider = new firebase.auth.GoogleAuthProvider();
 
-              return firebase.auth().signInWithPopup(provider)
+              return firebase.auth().signInWithPopup(provider);
             })
             .catch(e => {
               console.error(e);
@@ -41,7 +40,17 @@ class Firebase {
   }
 
   authStateChanged(state: any) {
-    console.log('AUTH STATE', state);
+    this.loggedInUser = state;
+    if (state) {
+      history.push('/')
+    }
+    else {
+      history.push('/login')
+    }
+  }
+
+  authenticated() {
+    return this.loggedInUser;
   }
 
   print() {
