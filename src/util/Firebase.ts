@@ -1,6 +1,7 @@
 import * as firebase from "firebase/app";
 import { config } from "./../firebase.config";
 import 'firebase/auth';
+import 'firebase/firestore';
 import history from './History';
 
 class Firebase {
@@ -11,7 +12,6 @@ class Firebase {
 
     firebase.auth()
       .onAuthStateChanged(this.authStateChanged.bind(this))
-
   }
 
   async kickOffAuthentication() {
@@ -52,9 +52,6 @@ class Firebase {
     return this.loggedInUser;
   }
 
-  print() {
-    console.log(config);
-  }
 }
 
 export default new Firebase();
